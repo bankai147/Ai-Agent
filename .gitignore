@@ -7,6 +7,25 @@
 # BlueJ files
 *.ctxt
 
+# Maven #
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.utils_backup
+pom.xml.vit
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/
+
+# IDE (VS Code) #
+.settings/
+.project
+.classpath
+.factorypath
+.vscode/
+bin/
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
