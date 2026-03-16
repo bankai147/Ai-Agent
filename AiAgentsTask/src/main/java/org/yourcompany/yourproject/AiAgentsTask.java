@@ -83,7 +83,7 @@ public class AiAgentsTask {
     }
 
     private static void handleBilling(String query) throws Exception {
-        String context = readDocs();
+        String context = readDocs(query);
         String prompt = "You are a Billing Specialist. Tools: CALL_PLAN, CALL_REFUND, CALL_HISTORY, SEND_FORM. \nContext: " + context + "\nHistory: " + chatHistory + "\nQuery: " + query;
 
         GenerateContentResponse response = client.models.generateContent(MODEL_NAME, prompt, null);
@@ -99,7 +99,7 @@ public class AiAgentsTask {
     }
 
     private static void handleTechnical(String query) throws Exception {
-        String context = readDocs();
+        String context = readDocs(query);
         String prompt = "You are a Technical Specialist. Context: " + context + "\nHistory: " + chatHistory + "\nQuestion: " + query;
 
         GenerateContentResponse response = client.models.generateContent(MODEL_NAME, prompt, null);
@@ -108,14 +108,29 @@ public class AiAgentsTask {
         chatHistory += "User: " + query + "\nAgent: " + aiText + "\n";
     }
 
-    private static String readDocs() throws IOException {
+    private static String readDocs(String query) throws IOException {
         Path docsPath = Paths.get("src/main/resources/docs");
         if (!Files.exists(docsPath)) return "No documentation found.";
+
+        String lowerQuery = query.toLowerCase();
+
         try (var stream = Files.walk(docsPath)) {
-            return stream.filter(Files::isRegularFile)
+            String result = stream.filter(Files::isRegularFile)
+                    .filter(path -> {
+                        String fileName = path.getFileName().toString().toLowerCase();
+                        String baseName = fileName.replace(".txt", "");
+                        return lowerQuery.contains(baseName) || baseName.contains(lowerQuery);
+                    })
                     .map(path -> {
-                        try { return Files.readString(path); } catch (IOException e) { return ""; }
-                    }).collect(Collectors.joining("\n"));
+                        try {
+                            return "[File: " + path.getFileName() + "]\n" + Files.readString(path);
+                        } catch (IOException e) {
+                            return "";
+                        }
+                    })
+                    .collect(Collectors.joining("\n\n"));
+
+            return result.isEmpty() ? "No specific documents found for this topic." : result;
         }
     }
 }
