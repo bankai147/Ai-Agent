@@ -1,0 +1,41 @@
+=== PRICING PLANS ===
+1. STARTER PLAN:
+   - Price: $0 per month (Free)
+   - Includes: 100 API requests per day, standard community support.
+   - Best for: Personal projects and testing.
+
+2. PRO PLAN:
+   - Price: $29 per month
+   - Includes: Unlimited API requests, priority email support, 5GB cloud storage.
+   - Best for: Professional developers and small teams.
+
+3. ENTERPRISE PLAN:
+   - Price: $199 per month
+   - Includes: Dedicated server, 24/7 phone support, custom integrations, unlimited storage.
+   - Best for: Large companies and high-load systems.
+
+=== REFUND AND BILLING POLICY ===
+
+REFUND TIMELINES:
+- Credit Cards (Visa/MasterCard): 5 to 10 business days.
+- PayPal: 3 to 5 business days.
+- Bank Transfers: Up to 14 business days.
+
+REFUND FORMS:
+- Standard Request Form: https://ai-agents.com/forms/refund-request
+- Required details: Transaction ID, User Email, Reason for refund.
+
+BILLING HISTORY ACCESS:
+- Users can view the last 12 months of transactions via the API or Dashboard.
+- Invoices are available in PDF format.
+
+=== FREQUENTLY ASKED QUESTIONS (FAQ) ===
+- Q: Can I change my plan? 
+  A: Yes, you can upgrade or downgrade at any time in your Dashboard settings.
+- Q: What happens if my payment fails? 
+  A: We will try to charge your card 3 times over 7 days. If it fails, your account will be moved to the Free plan.
+- Q: Are there any hidden fees? 
+  A: No, the prices listed above are all-inclusive. Taxes are calculated based on your country of residence.
+
+=== CONTACTS ===
+For billing disputes or custom quotes, contact: billing-support@ai-agents.com

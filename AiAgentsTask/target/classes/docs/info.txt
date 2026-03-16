@@ -1,0 +1,23 @@
+=== TECHNICAL SUPPORT KNOWLEDGE BASE ===
+
+ERROR CODES:
+- Error 500 (Internal Server Error): Occurs when the database connection times out. 
+  Fix: Check the database status and restart the 'api-service' container.
+- Error 404 (Not Found): The requested resource path is incorrect. 
+  Fix: Verify the API endpoint URL in your configuration file.
+- Error 401 (Unauthorized): API Key is missing or invalid.
+  Fix: Regenerate the key in the User Dashboard.
+
+SYSTEM REQUIREMENTS:
+- Supported OS: macOS 12+, Ubuntu 20.04+, Windows 10/11.
+- Java Version: JDK 17 or higher is mandatory.
+- Memory: Minimum 4GB RAM required for the AI Agent to run locally.
+
+TROUBLESHOOTING STEPS:
+1. Clear application cache using 'mvn clean'.
+2. Check logs in the /logs/app.log directory.
+3. Ensure the environment variable GEMINI_API_KEY is correctly set.
+
+API DOCUMENTATION:
+- Base URL: https://api.yourcompany.com/v1
+- Rate Limits: 60 requests per minute for the standard tier.

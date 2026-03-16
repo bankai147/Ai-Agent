@@ -1,0 +1,18 @@
+=== TROUBLESHOOTING INTEGRATION ISSUES ===
+
+COMMON BUGS:
+1. ERROR: "models/gemini-flash not found"
+   - Cause: Incorrect model name or missing version number.
+   - Fix: Use "models/gemini-1.5-flash" or "gemini-3-flash-preview".
+
+2. ERROR: "unreported exception java.io.IOException"
+   - Cause: File operations are not wrapped in try-catch or declared with 'throws'.
+   - Fix: Add 'throws IOException' to your method signature.
+
+3. ERROR: "HTTP 403 Forbidden"
+   - Cause: Invalid API Key or IP address restricted by Google Cloud.
+   - Fix: Check API Key permissions and billing status in Google AI Studio.
+
+4. ISSUE: "Agent always answers 'Please clarify'"
+   - Cause: The router prompt is too vague or the AI response contains extra characters.
+   - Fix: Use .trim().toUpperCase() and add "Return ONLY ONE WORD" to the prompt.

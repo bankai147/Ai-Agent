@@ -1,0 +1,19 @@
+=== API USAGE GUIDANCE ===
+
+ENDPOINTS:
+- POST /v1/chat: Send a user message to the routing agent.
+- GET /v1/status: Check the health of the connected Gemini model.
+
+REQUEST STRUCTURE:
+{
+  "model": "gemini-3-flash-preview",
+  "messages": [{"role": "user", "content": "Help with refund"}]
+}
+
+RATE LIMITING:
+- Standard Tier: 15 requests per minute (RPM).
+- Pro Tier: 1000 requests per minute (RPM).
+
+BEST PRACTICES:
+- Always implement a retry logic for 429 (Too Many Requests) errors.
+- Cache common billing questions to save on API costs.

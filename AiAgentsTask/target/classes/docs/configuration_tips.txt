@@ -1,0 +1,14 @@
+=== SYSTEM CONFIGURATION TIPS ===
+
+MODEL SELECTION:
+- Use 'gemini-1.5-flash' for high-speed routing tasks.
+- Use 'gemini-1.5-pro' or 'gemini-3-flash-preview' for complex technical reasoning.
+
+PERFORMANCE TUNING:
+- To reduce latency, limit the context size to under 5000 characters.
+- For billing agents, set 'temperature' to 0.1 to ensure precise numerical answers.
+- For technical agents, set 'temperature' to 0.5 to allow for creative troubleshooting.
+
+FILE MANAGEMENT:
+- Keep documentation files in .txt format for optimal parsing.
+- Avoid using large PDF files as they require additional OCR processing.

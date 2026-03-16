@@ -1,0 +1,16 @@
+=== SETUP AND INSTALLATION GUIDE ===
+
+PREREQUISITES:
+- Install Java Development Kit (JDK) 17.
+- Install Apache Maven 3.8.1 or higher.
+- Obtain an API Key from the Google AI Studio dashboard.
+
+INSTALLATION STEPS:
+1. Clone the repository: git clone https://github.com/yourproject/ai-agents.
+2. Navigate to the project folder: cd AiAgentsTask.
+3. Set environment variable: export API_KEY='your_secret_key'.
+4. Build the project: mvn clean install.
+
+POST-INSTALLATION:
+- Verify the connection by running 'mvn exec:java'.
+- Ensure the /src/main/resources/docs folder contains at least one .txt file.
