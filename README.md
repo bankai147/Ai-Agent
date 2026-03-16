@@ -1,5 +1,5 @@
 # Ai-Agent
-Markdown
+An intelligent multi-agent support system powered by Java and the Google Gemini API.
 # Multi-Agent Support System (Gemini 3.1 Flash Lite)
 
 An intelligent customer support infrastructure built with Java and the Google Gemini API. This system utilizes a multi-agent architecture including a Router, Technical Specialist, and Billing Specialist to process user requests using local documentation (RAG).
