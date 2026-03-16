@@ -53,3 +53,43 @@ Runtime Commands
 reset: Clears the current chat history.
 
 exit: Terminates the application.
+
+## Interaction Examples
+
+### 1. Routing and Tool Simulation
+The system identifies the intent and simulates backend calls for billing tasks.
+
+**Conversation:**
+- **User:** "What plan do I have?"
+- **Billing Agent:** "I can check your current plan for you. CALL_PLAN"
+- **System Output:** `[Backend] User User_777 is on PRO Plan ($29/mo). Status: Active.`
+
+**Description:** Demonstrates the Router correctly identifying a billing query and the Billing Agent triggering the `CALL_PLAN` logic to retrieve user data.
+
+### 2. Contextual Memory (RAG)
+The agent uses local documentation to answer specific technical questions.
+
+**Conversation:**
+- **User:** "What are the key features of this project?"
+- **Tech Specialist:** "Based on the documentation, the key features are Multi-agent support, Context memory, and RAG implementation."
+
+**Description:** Shows the Technical Specialist accessing the `docs/` folder to provide accurate information not present in its original training data.
+
+### 3. Refund Case Processing
+Handling multi-step logic and capturing user input for backend services.
+
+**Conversation:**
+- **User:** "I want a refund because the app is crashing."
+- **Billing Agent:** "I am sorry to hear that. I will open a refund case for you. CALL_REFUND"
+- **System Output:** `[Backend] Refund case REF-4829 opened for User_777. Reason: I want a refund because the app is crashing.`
+
+**Description:** Highlights the system's ability to pass the user's specific reason directly to the simulated backend service.
+
+### 4. Handling Irrelevant Queries
+The Router protects the system from out-of-scope requests.
+
+**Conversation:**
+- **User:** "What is the capital of France?"
+- **Support:** "I can only assist with technical or billing questions related to this project."
+
+**Description:** Demonstrates the IRRELEVANT category filter, ensuring the agents stay focused on the project's specific domain.
