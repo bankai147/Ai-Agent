@@ -53,12 +53,3 @@ Runtime Commands
 reset: Clears the current chat history.
 
 exit: Terminates the application.
-
-
----
-
-
-
-This documentation provides a clear guide for any developer to understand, install, and run your project. 
-
-Would you like me to help you draft the `docs/technical_manual.txt` file so the agents have actual content to read?
